@@ -287,7 +287,7 @@ footer{
   .content{
     padding-left: var(--gap-space);
   }
-  .input-mail-desktop{max-width:40em ;}
+  .input-mail-desktop{min-width:40em ;}
   button{
     width: 40%;
   }
