@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+:root{
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 50%);
+    --light-Desaturated-Blue: hsl(238, 22%, 98%);
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --bright-Moderate-Cyan: hsl(169, 70%, 75%);
+    --Light-Grayish: Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+    
+    --gap-space: 1.5rem;
+
+    --ff-header: 'Raleway';
+    --ff-normal: 'Open sans';
+    --fw-heads: 700;
+    --fw-normal: 400;
+
+    --nav-items-width: clamp(35%, 0.8rem, 10em);
+
+    --input-border-redius: 0.25rem;
+}
+/* css reset */
+/*1. Use a more-intuitive box-sizing model*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*2. Remove default margin*/
+* {
+margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application*/
+html, body {
+height: 100%;
+}
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+font-size: 1rem;
+font-family: var(--ff-normal);
+font-weight: 400;
+}
+  /*
+    6. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+  /*
+    7. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+font: inherit;
+}
+  /*
+    8. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+  /*
+    9. Create a root stacking context
+  */
+#root, #__next {
+isolation: isolate;
+}
+/*utiltes*/
+img{
+    max-width: max(100%, 65%);
+}
+.logo{
+    max-width: var(--nav-items-width);
+}
+main{
+    display: grid;
+    text-align: center;
+}
+.bolded{
+    font-weight: var(--fw-heads);
+    padding: var(--gap-space);
+    font-family: var(--ff-normal);
+}
+.desc{
+    padding: var(--gap-space);
+    line-height: 1.4;
+    font-family: var(--ff-normal);
+}
+.align-left{
+  text-align: left;
+  padding: 1rem;
+}
+ul{
+  list-style: none;
+}
+.second{
+  background:
+    url('images/bg-curve-mobile.svg') 
+    var(--light-Desaturated-Blue)
+    no-repeat;
+    overflow: visible;
+    background-position: 15% -5%;
+}
+.flex-parent-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-parent-coulmn{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header{
+  padding-inline: var(--gap-space);
+}
+/* head styling */
+.nav-first{
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: var(--nav-items-width);
+}
+.nav__list{
+    gap: 1.3rem;
+    font-family: var(--ff-header);
+    position: absolute;
+    right: 0;
+}
+h1, h2{
+  font-family: var(--ff-header);
+}
+/* inputs styling */
+.input-email{
+    padding: var(--gap-space);
+    display: grid;
+    gap: 0.8rem;
+}
+button{
+    display: block;
+    max-width: 100%;
+    background-color: var(--Bright-Blue);
+    border: transparent;
+    border-radius: var(--input-border-redius);
+    min-height: 2.5rem;
+    color: white;
+    font-family: var(--ff-header);
+    font-weight: var(--fw-heads);
+}
+.mail-box{
+    min-height: 2.5rem;
+    border: var(--Desaturated-Blue) solid 1.5px;
+    border-radius: var(--input-border-redius);
+}
+.placehoder-style ::placeholder{
+    padding-left: 1rem;
+    font-size: 0.825rem;
+    font-family: var(--ff-header);
+    color: var(--Light-Gray);
+}
+/* the how it works  */
+.how-it-works > figure{
+  border-bottom: 1.5px var(--Moderate-Cyan) solid;
+  width: fit-content;
+  margin: auto;
+  gap: 0.4rem;
+}
+.arrow{
+  width: 1.25rem;
+  padding: auto auto 0.5rem 1.2rem;
+}
+.how-it-works-p{
+  display: block;
+  color: var(--Moderate-Cyan);
+}
+/*quote box*/
+.card-quote{
+  background-color: white;
+  border: 8px var(--Light-Grayish) solid ;
+  max-width: 90%;
+  margin: var(--gap-space);
+  padding-block:var(--gap-space);
+  padding-inline: var(--gap-space);
+  text-align: left;
+  font-family: var(--ff-header);
+  border-radius: var(--input-border-redius);
+  display: grid;
+  gap: 0.7rem;
+  box-shadow:  2px 0.3px 5px -2px var(--Light-Gray);
+}
+.profile{
+  gap: 0.5rem;
+  color: var(--Very-Dark-Blue);
+  font-family: var(--ff-header);
+  font-weight: var(--fw-heads);
+  justify-content: flex-start;
+}
+.founder{
+  font-size: 0.75rem;
+}
+.founder__caption{
+  opacity: 0.6;
+}
+.founder-img{
+  border-radius: 50%;
+  width: min(15%, 60px);
+}
+/* get early accsess box */
+.early-access{
+  background-color: var(--Desaturated-Blue);
+  color: white;
+  padding-block: var(--gap-space);
+  padding-inline: var(--gap-space);
+}
+.early-access-desc{
+  padding: 0 2rem 0 2rem;
+}
+.button-fs{
+  font-size: 0.75rem;
+}
+/* footer styling */
+footer{
+  gap: var(--gap-space);
+  background-color: var(--Very-Dark-Blue);
+  color: white;
+  padding-block: var(--gap-space);
+  padding-inline: var(--gap-space);
+  font-family: var(--ff-header);
+  font-size: 0.825rem;
+}
+.footer-list{
+  display: grid;
+  text-align: left;
+  padding-left: 0px;
+  gap: 0.5rem;
+}
+.content-info{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 1rem;
+}
+.content-info-container{
+  display: grid;
+  gap: 1rem;
+}
+.social{
+  gap: 1rem;
+  margin: auto;
+}
+/* hover effect */
+.effect:hover{
+  cursor:pointer;
+  opacity: 0.7;
+}
+.how-it-works-effect:hover{
+  cursor: pointer;
+  color: var(--bright-Moderate-Cyan) ;
+}
+.footer-effect:hover{
+  cursor: pointer;
+  color: var(--Desaturated-Blue);
+  opacity: 0.7;
+}
+/* mail box invailed input */
+/* desktop */ 
+@media (min-width: 40em) {
+  main{
+    text-align: left;
+  }
+  .grid-parent-desktop{
+    display: grid;
+    gap: var(--gap-space);
+  }
+  .grid-col-1{grid-column: 1;}
+  .grid-row-1{grid-row: 1;}
+  .grid-col-2{grid-column: 2;}
+  .grid-col-3{grid-column: 3;}
+  .grid-col-span-3{grid-column: 1/4 ;}
+  .content{
+    padding-left: var(--gap-space);
+  }
+  .input-mail-desktop{max-width:40em ;}
+  button{
+    width: 40%;
+  }
+}
